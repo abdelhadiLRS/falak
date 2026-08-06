@@ -9,6 +9,21 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+
+  // منع حزم المكتبات الثقيلة داخل الدالة السحابية للـ Serverless
+  experimental: {
+    serverComponentsExternalPackages: [
+      '@milkdown/kit',
+      '@milkdown/core',
+      '@milkdown/react',
+      '@sentry/nextjs',
+      '@sentry/node',
+      '@sentry/opentelemetry',
+      '@prisma/client',
+      'prisma',
+    ],
+  },
+
   webpack(config, { isServer }) {
     if (!isServer) {
       config.resolve.fallback = {
