@@ -1,0 +1,66 @@
+.page {
+  max-inline-size: 50rem;
+  margin-inline: auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.page h1 {
+  margin-block: 0.5rem 2rem;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 8rem auto;
+  gap: 1rem;
+  align-items: end;
+  text-align: start;
+}
+
+.controls label {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.controls select,
+.controls input,
+.controls button {
+  min-block-size: 2.75rem;
+  padding-inline: 0.75rem;
+  border: 1px solid var(--color-borders-hairline);
+  border-radius: var(--border-radius-rounded);
+  background: var(--color-background-elevated);
+}
+
+.controls button {
+  cursor: pointer;
+  color: white;
+  background: var(--color-text-link);
+}
+
+.page audio {
+  inline-size: 100%;
+  margin-block-start: 2rem;
+}
+
+.track {
+  display: grid;
+  gap: 0.5rem;
+  margin-block-start: 1.5rem;
+  text-align: start;
+}
+
+.track audio {
+  margin-block-start: 0;
+}
+
+.note {
+  margin-block-start: 1rem;
+  color: var(--color-text-faded);
+}
+
+@media (max-width: 767px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "node"
+    ],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/dls/*": [
+        "./src/components/dls/*"
+      ],
+      "@/icons/*": [
+        "./public/icons/*"
+      ],
+      "@/tests/*": [
+        "./src/tests/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ],
+      "@/public/*": [
+        "./public/*"
+      ],
+      "@/data/*": [
+        "./src/data/*"
+      ],
+      "src/*": [
+        "./src/*"
+      ],
+      "types/*": [
+        "./types/*"
+      ],
+      "i18n.json": [
+        "./i18n.json"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

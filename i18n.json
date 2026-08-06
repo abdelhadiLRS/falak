@@ -1,0 +1,33 @@
+{
+  "locales": [
+    "ar",
+    "bn",
+    "en",
+    "es",
+    "fa",
+    "fr",
+    "id",
+    "it",
+    "ms",
+    "nl",
+    "pt",
+    "ru",
+    "sq",
+    "sw",
+    "th",
+    "tr",
+    "ur",
+    "vi",
+    "zh"
+  ],
+  "defaultLocale": "ar",
+  "pages": {
+    "*": [
+      "common",
+      "home"
+    ],
+    "/": [
+      "home"
+    ]
+  }
+}

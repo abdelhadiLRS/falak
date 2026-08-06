@@ -1,0 +1,61 @@
+/* Global Custom Styles for Tasleem Al Quran Academy */
+
+/* custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #0D7A5F;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dark .glass {
+  background: rgba(10, 15, 30, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Islamic Geometric Background Pattern */
+.islamic-pattern {
+  background-image: radial-gradient(#D4AF37 0.5px, transparent 0.5px), radial-gradient(#D4AF37 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+  opacity: 0.06;
+}
+
+/* Custom transitions & effects */
+.hover-gold-glow:hover {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  border-color: #D4AF37;
+}
+
+.hover-emerald-glow:hover {
+  box-shadow: 0 0 15px rgba(13, 122, 95, 0.2);
+  border-color: #0D7A5F;
+}
+
+/* Traditional Arabic typography utilities */
+.font-arabic {
+  font-family: 'Amiri', serif;
+}
+
+/* Base style settings */
+html {
+  scroll-behavior: smooth;
+}

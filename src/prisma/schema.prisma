@@ -1,0 +1,111 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  name          String?
+  passwordHash  String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  role          String   @default("student") // student, teacher, admin
+
+  @@map("users")
+}
+
+model Tafseer {
+  id          Int      @id @default(autoincrement())
+  name        String
+  language    String
+  author      String
+  description String?  @db.Text
+  createdAt   DateTime @default(now())
+
+  @@map("tafseers")
+}
+
+model Hadith {
+  id          Int      @id @default(autoincrement())
+  bookName    String
+  chapterName String
+  hadithText  String   @db.Text
+  narrator    String
+  grade       String
+  reference   String
+  createdAt   DateTime @default(now())
+
+  @@map("hadiths")
+}
+
+model Book {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?  @db.Text
+  author      String
+  category    String
+  language    String
+  pages       Int
+  publishYear Int
+  publisher   String
+  coverUrl    String?
+  fileUrl     String
+  views       Int      @default(0)
+  downloads   Int      @default(0)
+  rating      Float    @default(5.0)
+  createdAt   DateTime @default(now())
+
+  @@map("books")
+}
+
+model Lesson {
+  id          Int      @id @default(autoincrement())
+  title       String
+  category    String
+  teacher     String
+  videoUrl    String?
+  audioUrl    String?
+  pdfUrl      String?
+  description String?  @db.Text
+  createdAt   DateTime @default(now())
+
+  @@map("lessons")
+}
+
+model Article {
+  id          Int      @id @default(autoincrement())
+  title       String
+  content     String   @db.LongText
+  category    String   // scientific, dawah, fiqh, aqeedah, family, kids
+  author      String
+  createdAt   DateTime @default(now())
+
+  @@map("articles")
+}
+
+model Fatwa {
+  id          Int      @id @default(autoincrement())
+  question    String   @db.Text
+  answer      String   @db.Text
+  mufti       String
+  category    String
+  createdAt   DateTime @default(now())
+
+  @@map("fatwas")
+}
+
+model SeerahTimeline {
+  id          Int      @id @default(autoincrement())
+  yearHijri   Int
+  title       String
+  description String   @db.Text
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+
+  @@map("seerah_timeline")
+}

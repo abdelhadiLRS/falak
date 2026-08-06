@@ -1,0 +1,35 @@
+.page {
+  max-inline-size: 60rem;
+  margin-inline: auto;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.page h1 {
+  margin-block: 0.5rem 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--color-borders-hairline);
+  border-radius: var(--border-radius-rounded);
+  background: var(--color-background-elevated);
+}
+
+.card span {
+  color: var(--color-text-faded);
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
