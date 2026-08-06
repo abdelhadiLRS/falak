@@ -37,8 +37,4 @@ const nextConfig = {
   },
 };
 
-<<<<<<< HEAD
 module.exports = nextTranslate(nextConfig);
-=======
-module.exports = nextTranslate(nextConfig);
->>>>>>> f692b1b (edited)
