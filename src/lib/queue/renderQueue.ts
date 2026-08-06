@@ -20,8 +20,4 @@ class SimpleRenderQueue {
   }
 }
 
-<<<<<<< HEAD
 export const renderQueue = new SimpleRenderQueue();
-=======
-export const renderQueue = new SimpleRenderQueue();
->>>>>>> f692b1b (edited)

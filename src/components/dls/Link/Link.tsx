@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */ // eslint failed to lint properly
 import classNames from 'classnames';
-import NextLink from 'next/link';
+import { Link as RouterLink } from 'react-router-dom';
 
 import styles from './Link.module.scss';
 
@@ -45,16 +45,11 @@ const Link: React.FC<LinkProps> = ({
   <Wrapper
     shouldWrap={!download}
     wrapper={(node) => (
-      <NextLink
-        href={href}
-        {...(shouldPassHref && { shouldPassHref })}
-        {...(shouldPrefetch === false && { prefetch: false })}
-        shallow={isShallow}
-        scroll={!isShallow}
-        legacyBehavior
+      <RouterLink
+        to={href}
       >
         {node}
-      </NextLink>
+      </RouterLink>
     )}
   >
     <a
