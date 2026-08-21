@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="nav_calendar">التقويم الهجري والأحداث الإسلامية — فلك</title>
+  <meta name="description" content="التقويم الهجري والميلادي والتقويم القرآني والأحداث الإسلامية المباركة" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div id="app-sidebar-container"></div>
+    <div class="app-main">
+      <div id="app-header-container"></div>
+
+      <main class="page-content">
+        <div class="page-header">
+          <h1 class="page-title" data-i18n="nav_calendar">التقويم الهجري والميلادي</h1>
+          <p class="page-subtitle">استعراض التاريخ الهجري الشريف والمناسبات والأحداث الإسلامية العظيمة</p>
+        </div>
+
+        <div class="grid-cols-2" style="margin-bottom:2rem;">
+          <div class="card" style="text-align:center; padding:2rem; background:linear-gradient(135deg, var(--bg-card), var(--accent-light));">
+            <span class="badge badge-emerald" style="margin-bottom:0.5rem;">التاريخ الهجري اليوم</span>
+            <div id="today-hijri" style="font-size:2.2rem; font-weight:800; color:var(--accent-color); font-family:var(--font-quran); margin:0.5rem 0;">١٤٤٦ هـ</div>
+          </div>
+
+          <div class="card" style="text-align:center; padding:2rem;">
+            <span class="badge badge-gold" style="margin-bottom:0.5rem;">التاريخ الميلادي</span>
+            <div id="today-gregorian" style="font-size:1.8rem; font-weight:800; color:var(--text-primary); margin:0.5rem 0;">جاري التحميل...</div>
+          </div>
+        </div>
+
+        <h2 style="font-size:1.4rem; margin-bottom:1rem;">الأحداث والمناسبات الإسلامية المعتمدة</h2>
+        <div class="grid-cols-2" id="calendar-events-list">
+          جاري تحميل الأحداث الإسلامية...
+        </div>
+      </main>
+
+      <div id="app-footer-container"></div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/calendar.js"></script>
+</body>
+</html>

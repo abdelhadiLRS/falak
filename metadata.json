@@ -1,6 +1,0 @@
-{
-  "name": "Falak - فلك",
-  "description": "أكبر منصة إسلامية شاملة ومفتوحة المصدر لتعليم القرآن الكريم، التفاسير، التجويد، الحفظ، الحديث، السيرة والعلوم الإسلامية بالذكاء الاصطناعي",
-  "requestFramePermissions": ["microphone", "geolocation"],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

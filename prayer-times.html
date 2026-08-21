@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="nav_prayer_times">مواقيت الصلاة والقبلة — فلك</title>
+  <meta name="description" content="حساب مواقيت الصلاة الحية بدقة وتحديد اتجاه القبلة مع التنبيهات" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div id="app-sidebar-container"></div>
+    <div class="app-main">
+      <div id="app-header-container"></div>
+
+      <main class="page-content">
+        <div class="page-header">
+          <h1 class="page-title" data-i18n="nav_prayer_times">مواقيت الصلاة</h1>
+          <p class="page-subtitle">مواقيت الصلاة الدقيقة حسب موقعك الجغرافي واتجاه القبلة الشريفة</p>
+        </div>
+
+        <div class="card" style="margin-bottom:1.5rem; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem;">
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            <select id="city-select" class="btn btn-secondary" style="padding:0.6rem 1rem;">
+              <option value="makkah">مكة المكرمة (المملكة العربية السعودية)</option>
+              <option value="cairo">القاهرة (مصر)</option>
+              <option value="dubai">دبي (الإمارات العربية المتحدة)</option>
+              <option value="istanbul">إسطنبول (تركيا)</option>
+              <option value="london">لندن (المملكة المتحدة)</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" id="locate-me-btn">📍 تحديد موطني الجغرافي تلقائياً</button>
+        </div>
+
+        <div class="grid-cols-2" style="margin-bottom:1.5rem;">
+          <div>
+            <h2 style="font-size:1.3rem; margin-bottom:1rem;">أوقات الصلاة اليوم</h2>
+            <div class="grid-cols-1" id="prayer-times-list">
+              جاري تحميل الأوقات...
+            </div>
+          </div>
+
+          <!-- Qibla Compass Widget -->
+          <div class="card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+            <h2 style="font-size:1.3rem; margin:0 0 1rem 0;" data-i18n="qibla_direction">اتجاه القبلة</h2>
+            <div id="qibla-compass" style="width:180px; height:180px; border-radius:50%; border:4px solid var(--accent-color); display:flex; align-items:center; justify-content:center; position:relative; transition:transform 0.8s ease; margin:1rem 0;">
+              <div style="position:absolute; top:10px; font-weight:800; color:var(--accent-gold);">🕋 الكعبة</div>
+              <div style="font-size:2.5rem;">🧭</div>
+            </div>
+            <p style="font-size:0.9rem; color:var(--text-muted); margin:0;">اتجاه القبلة نحو مكة المكرمة مستنداً إلى الإحداثيات الجغرافية</p>
+          </div>
+        </div>
+      </main>
+
+      <div id="app-footer-container"></div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/prayer-times.js"></script>
+</body>
+</html>
