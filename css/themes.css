@@ -1,0 +1,62 @@
+/* themes.css - Falak CSS Custom Variables & Themes */
+
+:root {
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-nav: #0f172a;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+  --border-color: #e2e8f0;
+  --accent-color: #059669;
+  --accent-hover: #047857;
+  --accent-light: #d1fae5;
+  --accent-gold: #d97706;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --font-arabic: 'Tajawal', 'Cairo', system-ui, sans-serif;
+  --font-quran: 'Amiri Quran', 'Scheherazade New', serif;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #020617;
+  --bg-surface: #0f172a;
+  --bg-card: #1e293b;
+  --bg-nav: #020617;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-inverse: #0f172a;
+  --border-color: #334155;
+  --accent-color: #10b981;
+  --accent-hover: #059669;
+  --accent-light: #064e3b;
+  --accent-gold: #f59e0b;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-arabic);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Direction specifics */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}

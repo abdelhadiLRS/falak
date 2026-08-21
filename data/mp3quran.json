@@ -1,0 +1,56 @@
+{
+  "reciters": [
+    {
+      "id": "afs",
+      "name": "مشاري بن راشد العفاسي",
+      "server": "https://server8.mp3quran.net/afs/"
+    },
+    {
+      "id": "basit",
+      "name": "عبد الباسط عبد الصمد",
+      "server": "https://server7.mp3quran.net/basit/"
+    },
+    {
+      "id": "shri",
+      "name": "سعود الشريم",
+      "server": "https://server7.mp3quran.net/shri/"
+    },
+    {
+      "id": "sds",
+      "name": "عبد الرحمن السدیس",
+      "server": "https://server11.mp3quran.net/sds/"
+    },
+    {
+      "id": "minsh",
+      "name": "محمد صديق المنشاوي",
+      "server": "https://server10.mp3quran.net/minsh/"
+    },
+    {
+      "id": "hussary",
+      "name": "محمود خليل الحصري",
+      "server": "https://server13.mp3quran.net/hussary/"
+    }
+  ],
+  "radios": [
+    {
+      "id": 1,
+      "name": "إذاعة القرآن الكريم - القاهرة",
+      "url": "https://n02.radiojar.com/8s548p67332uv"
+    },
+    {
+      "id": 2,
+      "name": "إذاعة التلاوات الخاشعة",
+      "url": "https://backup.qurango.net/radio/salma"
+    },
+    {
+      "id": 3,
+      "name": "إذاعة القارئ عبد الباسط عبد الصمد",
+      "url": "https://qurango.net/radio/tarteel"
+    },
+    {
+      "id": 4,
+      "name": "إذاعة تفسير القرآن الكريم",
+      "url": "https://qurango.net/radio/tafsir"
+    }
+  ]
+}

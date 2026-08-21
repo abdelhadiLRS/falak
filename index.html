@@ -1,21 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>منصة فلك — الموسوعة الإسلامية ومنظومة تعليم القرآن الكريم</title>
-    <meta name="description" content="فلك (Falak) - أكبر منصة إسلامية مجانية ومفتوحة المصدر لتعليم القرآن الكريم وتفسيره وعلومه وتجويده وحفظه، مع موسوعة الحديث والسيرة والفقه والذكاء الاصطناعي." />
-    <meta property="og:title" content="فلك — منصة القرآن الكريم والعلوم الإسلامية" />
-    <meta property="og:description" content="الموسوعة الإسلامية الرقمية المتكاملة لتعليم القرآن والتفسير والحديث والسيرة والعلوم الشرعية" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;600;700&family=Tajawal:wght@300;400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-emerald-600 selection:text-white transition-colors duration-200">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="site_title">منصة فلك — لوحة التحكم</title>
+  <meta name="description" content="فلك (Falak) - لوحة التحكم التفاعلية للقرآن الكريم والعلوم الإسلامية" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div id="app-sidebar-container"></div>
+    <div class="app-main">
+      <div id="app-header-container"></div>
 
+      <main class="page-content">
+        <div class="page-header">
+          <h1 class="page-title" data-i18n="nav_workspace">لوحة التحكم</h1>
+          <p class="page-subtitle" data-i18n="site_desc">أكبر منصة إسلامية مجانية لمستقبل تعليم القرآن وتفسيره وتدبره وعلومه</p>
+        </div>
+
+        <div class="grid-cols-2" style="margin-bottom:1.5rem;">
+          <!-- Ayah of the Day -->
+          <div class="card" style="border-inline-start:4px solid var(--accent-color);">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem;">
+              <span class="badge badge-emerald" data-i18n="ayah_of_day">آية اليوم والتدبر</span>
+              <span id="daily-ayah-meta" style="font-size:0.85rem; color:var(--text-muted);">سورة البقرة</span>
+            </div>
+            <div id="daily-ayah-text" class="quran-text" style="font-size:1.4rem; margin-bottom:1rem;">
+              جاري تحميل آية اليوم...
+            </div>
+            <div style="padding:0.75rem; background:var(--bg-primary); border-radius:10px; font-size:0.9rem;">
+              <strong>إشراقة تدبرية: </strong><span id="daily-ayah-reflection">تفكر في آيات الله ينير القلب والوفاء بالعهد.</span>
+            </div>
+          </div>
+
+          <!-- Tasbeeh Counter -->
+          <div class="card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+            <span class="badge badge-gold" style="margin-bottom:0.75rem;" data-i18n="tasbeeh_counter">المسبحة الإلكترونية</span>
+            <div id="tasbeeh-count" style="font-size:3.5rem; font-weight:900; color:var(--accent-gold); font-family:var(--font-quran); line-height:1; margin:0.5rem 0;">0</div>
+            <div style="font-size:1.1rem; font-weight:700; margin-bottom:1rem; color:var(--text-secondary);">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div>
+            <div style="display:flex; gap:0.75rem;">
+              <button class="btn btn-primary" id="tasbeeh-increment" style="padding:0.75rem 2rem; font-size:1.1rem;">تسبيح +١</button>
+              <button class="btn btn-secondary" id="tasbeeh-reset">إعادة ضبط</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Adhkar & Shortcuts -->
+        <div class="grid-cols-2">
+          <div class="card">
+            <h2 class="card-title" data-i18n="adhkar_quick">أذكار سريعة</h2>
+            <div id="quick-adhkar-list">جاري تحميل الأذكار...</div>
+          </div>
+
+          <div class="card">
+            <h2 class="card-title">الوصول السريع</h2>
+            <div class="grid-cols-2" style="gap:1rem;">
+              <a href="quran.html" class="card" style="background:var(--bg-primary); text-align:center; padding:1rem;">
+                <div style="font-size:2rem;">📖</div>
+                <div style="font-weight:700; margin-top:0.5rem;" data-i18n="nav_quran">المصحف الشريف</div>
+              </a>
+              <a href="prayer-times.html" class="card" style="background:var(--bg-primary); text-align:center; padding:1rem;">
+                <div style="font-size:2rem;">🕌</div>
+                <div style="font-weight:700; margin-top:0.5rem;" data-i18n="nav_prayer_times">مواقيت الصلاة</div>
+              </a>
+              <a href="radio.html" class="card" style="background:var(--bg-primary); text-align:center; padding:1rem;">
+                <div style="font-size:2rem;">📻</div>
+                <div style="font-weight:700; margin-top:0.5rem;" data-i18n="nav_radio">إذاعات القرآن</div>
+              </a>
+              <a href="ramadan.html" class="card" style="background:var(--bg-primary); text-align:center; padding:1rem;">
+                <div style="font-size:2rem;">✨</div>
+                <div style="font-weight:700; margin-top:0.5rem;" data-i18n="nav_ramadan">تحدي رمضان</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div id="app-footer-container"></div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/workspace.js"></script>
+</body>
+</html>

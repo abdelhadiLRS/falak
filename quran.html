@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="nav_quran">المصحف الشريف الشامل — فلك</title>
+  <meta name="description" content="تصفح المصحف الشريف كاملاً، الاستماع لأشهر القراء، والتفسير والعلامات المرجعية" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="app-container">
+    <div id="app-sidebar-container"></div>
+    <div class="app-main">
+      <div id="app-header-container"></div>
+
+      <main class="page-content">
+        <div class="page-header">
+          <h1 class="page-title" data-i18n="nav_quran">المصحف الشريف</h1>
+          <p class="page-subtitle">تصفح السور والآيات، الاستماع بصوت كبار القراء والتفسير المباشر</p>
+        </div>
+
+        <div id="quran-reader-area" style="display:none; margin-bottom:2rem;"></div>
+
+        <div class="card" style="margin-bottom:1.5rem; display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between;">
+          <input type="text" id="quran-search-input" class="btn btn-secondary" style="flex:1; min-width:200px; text-align:start;" placeholder="ابحث عن اسم السورة أو الرقم..." />
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <label style="font-size:0.9rem; font-weight:600;" data-i18n="select_reciter">اختر القارئ:</label>
+            <select id="quran-reciter-select" class="btn btn-secondary" style="padding:0.5rem 1rem; border-radius:10px;">
+              <option>مشاري بن راشد العفاسي</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid-cols-3" id="surah-grid">
+          جاري تحميل فهرس السور...
+        </div>
+      </main>
+
+      <div id="app-footer-container"></div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/quran.js"></script>
+</body>
+</html>
